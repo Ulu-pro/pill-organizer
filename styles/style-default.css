@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.add-form {
+    background: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.time-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.time-select label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.medication-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.medication-card.in-container {
+    border-left: 4px solid #28a745;
+    background: #f8fff9;
+}
+
+.med-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.med-header h4 {
+    color: #007bff;
+    margin: 0;
+    flex: 1;
+}
+
+.container-toggle {
+    background: #28a745;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container-toggle.in-container {
+    background: #6c757d;
+}
+
+.container-toggle:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.clear-container-btn {
+    background: #dc3545;
+    width: auto;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.clear-container-btn:hover {
+    background: #c82333;
+}
+
+.med-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: black;
+    width: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    width: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.time-badge {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.when-badge {
+    display: inline-block;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.before-food {
+    background: #dc3545;
+}
+
+.after-food {
+    background: #17a2b8;
+}
+
+.import-export {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.export-btn, .import-btn {
+    flex: 1;
+    background: #6c757d;
+    width: auto;
+}
+
+.export-btn:hover, .import-btn:hover {
+    background: #5a6268;
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 480px) {
+    .import-export {
+        flex-direction: column;
+    }
+    
+    .time-select {
+        grid-template-columns: 1fr;
+    }
+    
+    .med-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .container-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .clear-container-btn {
+        width: 100%;
+    }
+    
+    .med-actions {
+        flex-direction: column;
+    }
+    
+    .edit-btn, .delete-btn {
+        width: 100%;
+    }
+}

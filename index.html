@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#007bff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+    <title>Расписание таблеток</title>
+    <link rel="stylesheet" href="styles/style-default.css"> <!-- Еще в sw.js -->
+</head>
+<body>
+    <div class="container">
+        <h1>💊 Мой контейнер для таблеток</h1>
+        
+        <!-- Кнопки импорта/экспорта -->
+        <div class="import-export">
+            <button onclick="importData()" class="import-btn">📥 Импорт данных</button>
+            <button onclick="exportData()" class="export-btn">📤 Экспорт данных</button>
+        </div>
+        
+        <div class="add-form">
+            <div class="form-header">
+                <h3 id="formTitle">Добавить лекарство</h3>
+                <button onclick="cancelEdit()" class="cancel-btn" id="cancelBtn" style="display: none;">❌ Отмена</button>
+            </div>
+            <input type="text" id="medName" placeholder="Название лекарства">
+            <input type="text" id="medDose" placeholder="Доза (например, 1 таблетка)">
+            <input type="number" id="medDays" placeholder="Курс (дней)">
+            
+            <select id="whenTake">
+                <option value="до еды">🕒 До еды</option>
+                <option value="после еды">🕒 После еды</option>
+            </select>
+            
+            <div class="time-select">
+                <label><input type="checkbox" name="time" value="утро"> 🌅 Утро</label>
+                <label><input type="checkbox" name="time" value="день"> ☀️ День</label>
+                <label><input type="checkbox" name="time" value="вечер"> 🌇 Вечер</label>
+                <label><input type="checkbox" name="time" value="ночь"> 🌙 Ночь</label>
+            </div>
+            
+            <button onclick="saveMedication()" id="saveBtn">➕ Добавить</button>
+        </div>
+
+        <div class="schedule">
+            <h3>Что положить в контейнер сегодня</h3>
+            <div id="todaySchedule"></div>
+        </div>
+
+        <div class="medications-list">
+            <h3>Все лекарства</h3>
+            <div id="medicationsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

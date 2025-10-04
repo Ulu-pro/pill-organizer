@@ -1,0 +1,23 @@
+{
+  "name": "Мой контейнер для таблеток",
+  "short_name": "Таблетки",
+  "description": "Управление лекарствами и контейнером",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["health", "productivity"]
+}

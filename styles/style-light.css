@@ -1,0 +1,293 @@
+/* style-v1-minimal.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 2.2em;
+}
+
+h2, h3 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.add-form {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cancel-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: auto;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input, select, button {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input, select {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: white;
+    transform: translateY(-2px);
+}
+
+button {
+    background: #2d3748;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.time-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.time-select label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-select label:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.medication-card {
+    background: white;
+    border: none;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #667eea;
+}
+
+.medication-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.medication-card.in-container {
+    border-left-color: #48bb78;
+    background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+}
+
+.med-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.med-header h4 {
+    color: #2d3748;
+    margin: 0;
+    flex: 1;
+    font-size: 1.2em;
+}
+
+.container-toggle {
+    background: #48bb78;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 12px;
+}
+
+.container-toggle.in-container {
+    background: #718096;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.clear-container-btn {
+    background: #e53e3e;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.med-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background: #ed8936;
+    color: white;
+    width: auto;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.delete-btn {
+    background: #e53e3e;
+    width: auto;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.time-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 2px;
+    font-weight: 500;
+}
+
+.when-badge {
+    display: inline-block;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 2px;
+    font-weight: 500;
+}
+
+.before-food {
+    background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+}
+
+.after-food {
+    background: linear-gradient(135deg, #63b3ed 0%, #4299e1 100%);
+}
+
+.import-export {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.export-btn, .import-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #4fd1c7 0%, #319795 100%);
+    width: auto;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .import-export {
+        flex-direction: column;
+    }
+    
+    .time-select {
+        grid-template-columns: 1fr;
+    }
+    
+    .med-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .container-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    
+    .clear-container-btn {
+        width: 100%;
+    }
+    
+    .med-actions {
+        flex-direction: column;
+    }
+    
+    .edit-btn, .delete-btn {
+        width: 100%;
+    }
+}
