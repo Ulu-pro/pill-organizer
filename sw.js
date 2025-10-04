@@ -4,7 +4,7 @@ const CACHE_NAME = 'pills-container-v1';
 const urlsToCache = [
   './',
   './index.html',
-  './styles/style-default.css',
+  './styles/style-dark.css',
   './script.js',
   './manifest.json'
 ];
